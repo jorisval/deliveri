@@ -8,9 +8,10 @@ function NavLg() {
         <div className="nav-lg">
             <nav>
                 <ul className="">
-                    <li className={ activePage === "home" ? "active" : "" }><Link to="/#cta-section">Product</Link></li>
-                    <li className={ activePage === "contact" ? "active" : "" }><Link to="/contact">Contact</Link></li>
-                    <li className={ activePage === "faq" ? "active" : "" }><Link to="/faq">About</Link></li>
+                    <li className={ activePage === "home" ? "active" : "" }><Link to="/">Home</Link></li>
+                    <li className=""><Link to="/">Our Service</Link></li>
+                    <li className=""><Link to="/">Pricing</Link></li>
+                    <li className={ activePage === "contact" ? "active" : "" }><Link to="/contact">Contact Us</Link></li>
                     <li className={ activePage === "blog" ? "active" : "" }><Link to="/blog">Blog</Link></li>
                 </ul>
             </nav>

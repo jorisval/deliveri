@@ -15,7 +15,7 @@ function Header() {
       </div>
       <NavLg />
       <div className="header__button">
-          <button className="cta-button">Login</button>
+          <button className="cta-button"><span className="bi bi-telephone-fill"></span> <span className="number"> +33 7 80 70 82 87</span></button>
       </div>
     </div>
   );

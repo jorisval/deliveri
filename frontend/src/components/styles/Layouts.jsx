@@ -12,11 +12,14 @@ const fadeIn = keyframes`
 
 const LayoutsStyle = createGlobalStyle`
     body {
-        font-familly: ${theme.typography.primaryFontFamily};
+        font-familly: ${theme.typography.secondaryFontFamily};
         background-color: ${theme.colors.white};
     }
     p {
         font-size: 1rem;
+    }
+    h1, h2, h3 {
+        font-familly: ${theme.typography.primaryFontFamily};
     }
     .header {
         animation: ${fadeIn} 1s ease-in;
@@ -30,7 +33,7 @@ const LayoutsStyle = createGlobalStyle`
         .menu-md {
                 display: block;
 
-            @media (min-width: ${theme.breakpoints.up.medium}) {
+            @media (min-width: ${theme.breakpoints.up.large}) {
                 display: none;
             }
 
@@ -122,13 +125,9 @@ const LayoutsStyle = createGlobalStyle`
             margin-left: 4%;
             padding: 20px;
             text-align: center;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
+            @media (min-width: ${theme.breakpoints.up.large}) {
                 padding-left: 0;
                 margin-right: 20%;
-                margin-left: 0;
-            }
-            @media (min-width: ${theme.breakpoints.up.large}) {
-                margin-right: 40%;
             }
             img {
                 width: 80%;
@@ -141,15 +140,13 @@ const LayoutsStyle = createGlobalStyle`
         .nav-lg {
             display: none;
             font-size: 0.875rem;
-            width: 60%;
+            width: 47%;
             margin-right: 5%;
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
+            @media (min-width: ${theme.breakpoints.up.large}) {
                 display: block;
             }
             @media (min-width: ${theme.breakpoints.up.xlarge}) {
                 font-size: 1rem;
-                width: 50%;
             }
 
             ul {
@@ -160,37 +157,37 @@ const LayoutsStyle = createGlobalStyle`
             }
 
             li {
-            padding: 20px 4%;
+                padding: 20px 4%;
+                &.active {
+                    a {
+                        color: ${theme.colors.link};
+                    }
+                }
             }
 
             a {
+                font-familly: ${theme.typography.secondaryFontFamily};
                 text-decoration: none;
                 color: ${theme.colors.nav};
-                padding: 0 0 0.25rem 0;
+                &:hover {
+                    color: ${theme.colors.link};
+                }
             }
         }
 
         &__button {
             padding: 17px 0;
             button {
-                font-size: 0.875rem;
-                padding: 0.5rem 0.875rem;
-            }
-        }
-    }
-    .header.home {
-        background-color: ${theme.colors.backgroundColor1};
-        .menu-md {
-            &__icon {
-                div {
-                    background-color: ${theme.colors.white};
+                font-size: 0.625rem;
+                padding: 0.5rem 0.75rem;
+                background-color: ${theme.colors.primary};
+                .bi {
+                    color: ${theme.colors.secondary};
                 }
-            }
-        }
-        .nav-lg {
-            ul {
-                a {
-                    color: ${theme.colors.white};
+                .number {
+                    @media (max-width: ${theme.breakpoints.down.large}) {
+                        display: none;
+                    }
                 }
             }
         }
