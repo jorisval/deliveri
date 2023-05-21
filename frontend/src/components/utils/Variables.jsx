@@ -20,8 +20,8 @@ const theme = {
     },
   
     typography: {
-      primaryFontFamily: "Cairo, Arial, Sans-serif",
-      secondaryFontFamily: "Roboto, Arial, Sans-serif",
+      primaryFontFamily: "Roboto, Arial, Sans-serif",
+      secondaryFontFamily: "Cairo, Arial, Sans-serif",
       navFontSize: "1.1rem",
     },
   

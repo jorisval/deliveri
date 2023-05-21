@@ -12,14 +12,14 @@ const fadeIn = keyframes`
 
 const LayoutsStyle = createGlobalStyle`
     body {
-        font-familly: ${theme.typography.secondaryFontFamily};
+        font-familly: ${theme.typography.primaryFontFamily};
         background-color: ${theme.colors.white};
     }
     p {
         font-size: 1rem;
     }
     h1, h2, h3 {
-        font-familly: ${theme.typography.primaryFontFamily};
+        font-familly: ${theme.typography.secondaryFontFamily};
     }
     .header {
         animation: ${fadeIn} 1s ease-in;
@@ -166,7 +166,6 @@ const LayoutsStyle = createGlobalStyle`
             }
 
             a {
-                font-familly: ${theme.typography.secondaryFontFamily};
                 text-decoration: none;
                 color: ${theme.colors.nav};
                 &:hover {

@@ -55,6 +55,7 @@ body {
         }
         h1 {
             color: ${theme.colors.white};
+            font-familly: ${theme.typography.secondaryFontFamily};
             font-size: 1.5rem;
             line-height: 2rem;
             margin-bottom: ${theme.layout.spaceBetween30};
