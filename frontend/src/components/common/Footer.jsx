@@ -1,6 +1,9 @@
 import { useState } from "react";
-import Logo from "../../assets/images/deliveri-logo.png";
+import CallFast from "../../assets/images/call-fast.png";
+import PlayStore from "../../assets/images/google-play.png";
+import GoogleMap from "../../assets/images/google-map.png";
 import ThankYouPopup from "../pages/Thank-you-newsletter";
+import { Link } from "react-router-dom";
 
 function Footer() {
     const [showThankYouPopup, setShowThankYouPopup] = useState(false);
@@ -42,63 +45,47 @@ function Footer() {
       };
 
     return (
-        <div className="footer">
-            {showThankYouPopup && (
-                <ThankYouPopup onClose={handleCloseThankYouPopup} />
-            )}
-            <div className="footer__part-1">
-                <div className="media">
-                    <img src={Logo} alt=""/>
-                    <ul>
-                        <li><a href="#b"><i className="bi bi-instagram"></i> Instagram</a></li>
-                        <li><a href="#b"><i className="bi bi-facebook"></i> Facebook</a></li>
-                        <li><a href="#b"><i className="bi bi-twitter"></i> Twitter</a></li>
-                    </ul>
+        <>
+            <div className="footer-newsletter">
+                <h3>Join To Our Newsletter</h3>
+                <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla</p>
+                <form onSubmit={handleSubmit}>
+                    <input type="email" id="email" name="email" placeholder="Email"/>
+                    <input type="submit" value="SUBSCRIBE"/>
+                </form>
+            </div>
+            <div className="footer">
+                {showThankYouPopup && (
+                    <ThankYouPopup onClose={handleCloseThankYouPopup} />
+                )}
+                <div className="footer__part-1">
+                    <div>
+                        <h2>Follow Your Shipment Via GPS</h2>
+                        <div className="separate"></div>
+                        <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue adipiscing elit duis tristique sollicitudin...</p>
+                        <Link to="">
+                            <img src={PlayStore} alt="" />
+                        </Link>
+                    </div>
+                    <img src={GoogleMap} alt="" />
                 </div>
-                <div className="products">
-                    <h3>Products</h3>
-                    <ul>
-                        <li><a href="#b"><i className="bi"></i>Desk Booking</a></li>
-                        <li><a href="#b"><i className="bi"></i>Visitor Management</a></li>
-                        <li><a href="#b"><i className="bi"></i>Modern Ticketing</a></li>
-                        <li><a href="#b"><i className="bi"></i>Room Scheduling</a></li>
-                        <li><a href="#b"><i className="bi"></i>Facilities Service </a></li>
-                        <li><a href="#b"><i className="bi"></i>Marketplace</a></li>
-                    </ul>
+                <div className="footer__part-2">
+                    <div className="contacts">
+                        <img src={CallFast} alt=""/>
+                        <p>Call us at any time :  </p>
+                        <span>+33 7 80 70 82 87</span>
+                        <ul>
+                            <li><a href="#b"><i className="bi bi-facebook"></i></a></li>
+                            <li><a href="#b"><i className="bi bi-instagram"></i></a></li>
+                            <li><a href="#b"><i className="bi bi-twitter"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="about">
-                    <h3>About</h3>
-                    <ul>
-                        <li><a href="#b"><i className="bi"></i>Resources</a></li>
-                        <li><a href="#b"><i className="bi"></i>Our Story</a></li>
-                        <li><a href="#b"><i className="bi"></i>Our Team</a></li>
-                        <li><a href="#b"><i className="bi"></i>Careers</a></li>
-                        <li><a href="#b"><i className="bi"></i>Security</a></li>
-                    </ul>
-                </div>
-                <div className="support">
-                    <h3>Contact & Support</h3>
-                    <ul>
-                        <li><a href="#b"><i className="bi"></i>1 (800) 751-4512</a></li>
-                        <li><a href="#b"><i className="bi"></i>support@teamapp.com</a></li>
-                        <br/>
-                        <li><a href="#b"><i className="bi"></i>Privacy Policy</a></li>
-                        <li><a href="#b"><i className="bi"></i>Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div className="newsletter">
-                    <h3>Newsleter</h3>
-                    <p>Sign up for our newsletter to stay up to date with what's new!</p>
-                    <form onSubmit={handleSubmit}>
-                        <input type="email" id="email" name="email" placeholder="Email"/>
-                        <input type="submit" value="Sign up"/>
-                    </form>
+                <div className="footer__part-3">
+                    <p>© 2023 DELIVERI | All rights reserved.</p>
                 </div>
             </div>
-            <div className="footer__part-2">
-                <p>© 2023 Teamapp. All rights reserved.</p>
-            </div>
-        </div>
+        </>
     );
 }
 

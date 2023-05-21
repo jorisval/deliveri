@@ -1,5 +1,6 @@
 import styled, { createGlobalStyle, keyframes, css } from 'styled-components';
 import theme from '../utils/Variables';
+import FooterBackground from '../../assets/images/footer-background-image.png';
 
 const fadeIn = keyframes`
   0% {
@@ -195,71 +196,52 @@ const LayoutsStyle = createGlobalStyle`
     
     .footer {
         animation: ${fadeIn} 1s ease-in;
-        padding: 0 ${theme.layout.marginLeftRight};
-        padding-top: ${theme.layout.spaceBetween30};
-        padding-bottom: 1.25rem;
+        padding-top: ${theme.layout.spaceBetween90};
+        padding-bottom: 0.25rem;
         margin: 0 -0.5rem;
-        margin-top: ${theme.layout.spaceBetween90};
-        color: ${theme.colors.paragraph};
-        background-color: ${theme.colors.white};
-
-        &__part-1 {
+        color: ${theme.colors.white};
+        background-color: ${theme.colors.primary};
+        z-index: 19;
+        position: relative;
+        
+        &-newsletter {
             display: flex;
-            flex-direction: column-reverse;
-            justify-content: space-between;
-            font-size: 1rem;
-            margin-bottom: ${theme.layout.spaceBetween60};
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                flex-direction: row;
-                flex-wrap: wrap;
-                margin-bottom: ${theme.layout.spaceBetween90};
-            }
-
-            div {
-                padding: 1rem;
-            }
-
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 20;
+            width: 80%;
+            margin: auto;
+            color: ${theme.colors.white};
+            background-color: ${theme.colors.secondary};
+            padding: ${theme.layout.spaceBetween20};
+            margin-top: ${theme.layout.spaceBetween90};
+            margin-bottom: -${theme.layout.spaceBetween90};
             h3 {
-                font-size: 1.125rem;
-                color: ${theme.colors.titleH3};
-                font-weight: 500;
-                margin-bottom: 0.625rem;
+                color: ${theme.colors.white};
+                margin: 0;
             }
-
-            ul {
-                padding-left: 0;
-            }
-
-            li {
-                list-style-type: none;
-                margin: 0.25rem 0;
-            }
-
-            a {
-                text-decoration: none;
-                color: ${theme.colors.paragraph};
-
-                &:hover {
-                    color: ${theme.colors.secondary};
+            p {
+                font-size: 0.875rem;
+                font-weight: 300;
+                margin: 0.5rem 0;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 1rem;
                 }
             }
-
-            .bi-instagram, .bi-facebook, .bi-twitter {
-                color: ${theme.colors.titleH3};
-            }
-
             form {
                 display: flex;
-                width: 100%;
+                width: 80%;
+                justify-content: center;
             }
 
             input[type="email"] {
                 font-size: 0.875rem;
-                color: ${theme.colors.paragraph};
+                color: ${theme.colors.backgroundColor2};
                 padding: 0.25rem 0.5rem;
                 border: 2px ${theme.colors.button} solid;
-                border-radius: 4px 0 0 4px;
                 width: 65%;
 
                 @media (min-width: ${theme.breakpoints.up.medium}) {
@@ -271,11 +253,10 @@ const LayoutsStyle = createGlobalStyle`
             input[type="submit"] {
                 font-size: 0.875rem;
                 color: ${theme.colors.white};
-                background-color: ${theme.colors.button};
+                background-color: ${theme.colors.backgroundColor2};
                 padding: 0.25rem 0.5rem;
-                border: 2px ${theme.colors.button} solid;
-                border-radius: 0 4px 4px 0;
-                margin-left: -5px;
+                border: 1px ${theme.colors.backgroundColor2} solid;
+                margin-left: 5px;
 
                 @media (min-width: ${theme.breakpoints.up.medium}) {
                     padding: 0.5rem 1rem;
@@ -284,12 +265,108 @@ const LayoutsStyle = createGlobalStyle`
             }
         }
 
+        &__part-1 {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
+            div {
+                width: 100%;
+                margin-bottom: ${theme.layout.spaceBetween20};
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    width: 30%;
+                }
+                h2 {
+                    color: ${theme.colors.white};
+                }
+                .separate {
+                    width: 10%;
+                    border: 1px solid ${theme.colors.secondary};
+                }
+                p {
+                    font-size: 0.875rem;
+                    font-weight: 300;
+                    line-height: 1.5rem;
+                    @media (min-width: ${theme.breakpoints.up.medium}) {
+                        font-size: 1rem;
+                    }
+                }
+                img {
+                    height: 40px;
+                    max-width: 150px;
+                }
+            }
+            img {
+                width: 80%;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    width: 50%;
+                }
+            }
+        }
         &__part-2 {
+            display: flex;
+            justify-content: center;
             font-size: 1rem;
+            background: url(${FooterBackground}) center bottom / cover;
+            margin-bottom: 0.5rem;
+            padding: ${theme.layout.spaceBetween90} 0;
 
+            div {
+                padding: 1rem;
+                text-align: center;
+            }
             p {
-                margin: 0;
-            } 
+                font-size: 1rem;
+                color: ${theme.colors.white};
+                font-weight: 500;
+                margin: 0.5rem 0;
+            }
+            span {
+                font-size: 1.25rem;
+                color: ${theme.colors.secondary};
+                font-weight: 500;
+                margin-bottom: 0.5rem;
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+                padding: 0;
+            }
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                list-style-type: none;
+                margin: 0 0.25rem;
+                width: 30px;
+                height: 30px;
+                border: 1px solid ${theme.colors.secondary};
+                border-radius: 50%;
+            }
+
+            a {
+                text-decoration: none;
+                color: ${theme.colors.white};
+
+                &:hover {
+                    color: ${theme.colors.secondary};
+                }
+            }
+
+            .bi-instagram, .bi-facebook, .bi-twitter {
+                color: ${theme.colors.white};
+            }
+        }
+
+        &__part-3 {
+            font-size: 1rem;
+            text-align: center;
+            p {
+                font-size: 0.875rem;
+                font-weight: 300;
+            }
         }
     }
 `;
