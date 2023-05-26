@@ -21,7 +21,8 @@ body {
     flex-direction: column;
     position: relative;
     z-index: 1;
-    background: url(${HeroBackground}) center center / cover;
+    height: 70vh;
+    background: url(${HeroBackground}) center bottom / cover;
     background-color: ${theme.colors.backgroundColor1};
     margin: 0 -0.5rem;
     padding-bottom: ${theme.layout.spaceBetween90};
@@ -36,7 +37,11 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(47,50,144,0.95);
+        background-color: rgba(86,63,79,0.80);
+        @media (min-width: ${theme.breakpoints.up.large}) {
+            display:none;
+        }
+
     }
     &__text {
         border-radius: 0.5rem;
@@ -44,11 +49,11 @@ body {
         z-index: 2;
         width: 80%;
         margin: auto;
-        text-align: center;
+        
         @media (min-width: ${theme.breakpoints.up.large}) {
             padding-top: ${theme.layout.spaceBetween90};
             margin: 0 0 0 ${theme.layout.marginLeftRight};
-            width: 30%;
+            width: 40%;
             max-width: 33rem;
             text-align: unset;
             border-radius: 0;
@@ -70,55 +75,16 @@ body {
             font-size: 1rem;
             line-height: 1.625rem;
             font-weight: 200;
+            list-style-type: none;
+            padding-left: 0;
             margin-bottom: ${theme.layout.spaceBetween30};
             @media (min-width: ${theme.breakpoints.up.large}) {
                 text-align: left;
             }
-        }
-        .cta-row {
-            display: flex;
-            justify-content: center;
-            @media (min-width: ${theme.breakpoints.up.large}) {
-                justify-content: left;
+            .bi {
+                color: ${theme.colors.secondary}; 
             }
-            form {
-                display: flex;
-                justify-content: center;
-                width: 80%;
-                @media (min-width: ${theme.breakpoints.up.large}) {
-                    justify-content: left;
-                }
-            }
-
-            input[type="email"] {
-                font-size: 0.875rem;
-                color: ${theme.colors.paragraph};
-                padding: 0.5rem 0.75rem;
-                border: 2px ${theme.colors.button} solid;
-                border-radius: 4px 0 0 4px;
-                width: 65%;
-
-                @media (min-width: ${theme.breakpoints.up.medium}) {
-                    padding: 0.75rem 1rem;
-                    font-size: 1rem;
-                }
-            }
-
-            input[type="submit"] {
-                font-size: 0.875rem;
-                color: ${theme.colors.white};
-                background-color: ${theme.colors.button};
-                padding: 0.5rem 0.75rem;
-                border: 2px ${theme.colors.button} solid;
-                border-radius: 0 4px 4px 0;
-                margin-left: -5px;
-
-                @media (min-width: ${theme.breakpoints.up.medium}) {
-                    padding: 0.75rem 1rem;
-                    font-size: 1rem;
-                }
-            }
-        }
+        }   
 
     }
     &__image {

@@ -9,8 +9,8 @@ import ThankYouPopup from "../pages/Thank-you-subscribe";
 //import CustomerImage3 from "../../assets/images/review-image-3.png";
 //import CustomerImage4 from "../../assets/images/review-image-1.png";
 //import Comas from "../../assets/images/review-comas.png";
-//import { Link } from "react-router-dom";
 import { HomeContainer } from "../styles/Home";
+import { Link } from "react-router-dom";
 
 
 function Home() {
@@ -19,40 +19,6 @@ function Home() {
     useEffect(() => {
         setActivePage('home');
     }, [setActivePage]);
-    
-
-    async function handleSubmit(event) {
-        event.preventDefault();
-      
-        const formData = new FormData(event.target);
-        const searchParams = new URLSearchParams();
-      
-        for (const [key, value] of formData.entries()) {
-          searchParams.append(key, value);
-        }
-    
-        try {
-            const response = await fetch("http://localhost:3000/api/newsletter", {
-                method: "POST",
-                body: searchParams,
-                headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                },
-            });
-      
-            const data = await response.json();
-            console.log(data);
-
-            // Reset the form
-            event.target.reset();
-
-            // Show thank you popup
-            setShowThankYouPopup(true);
-
-        } catch (error) {
-            console.error("Error:", error);
-        }
-    }
 
     const handleCloseThankYouPopup = () => {
         setShowThankYouPopup(false);
@@ -62,13 +28,14 @@ function Home() {
         <HomeContainer className="home">
             <div className="hero">
                 <div className="hero__text">
-                    <h1>The Ultimate To-Do List Application</h1>
-                    <p className="subtitle">A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.</p>
+                    <h1>We Have Faster Delivery Than Others</h1>
+                    <ul className="subtitle">
+                        <li><span className="bi bi-check2"></span> You can pay bill</li>
+                        <li><span className="bi bi-check2"></span> Buy any items you want</li>
+                        <li><span className="bi bi-check2"></span> You can deliver parcels to someone</li>
+                    </ul>
                     <div className="cta-row">
-                        <form onSubmit={handleSubmit}>
-                            <input type="email" id="email" name="email" placeholder="Email"/>
-                            <input type="submit" value="Sign up"/>
-                        </form>
+                        <Link to="" className="cta-button">Discover our Services</Link>
                     </div>
                 </div>
                 <div className="hero__overlay"></div>

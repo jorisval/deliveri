@@ -169,6 +169,7 @@ const LayoutsStyle = createGlobalStyle`
             a {
                 text-decoration: none;
                 color: ${theme.colors.nav};
+                white-space: nowrap;
                 &:hover {
                     color: ${theme.colors.link};
                 }
@@ -180,11 +181,13 @@ const LayoutsStyle = createGlobalStyle`
             button {
                 font-size: 0.625rem;
                 padding: 0.5rem 0.75rem;
+                white-space: nowrap;
                 background-color: ${theme.colors.primary};
                 .bi {
                     color: ${theme.colors.secondary};
                 }
                 .number {
+                    white-space: nowrap;
                     @media (max-width: ${theme.breakpoints.down.large}) {
                         display: none;
                     }
@@ -268,8 +271,11 @@ const LayoutsStyle = createGlobalStyle`
         &__part-1 {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
             padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                flex-direction: row;
+            }
             div {
                 width: 100%;
                 margin-bottom: ${theme.layout.spaceBetween20};
