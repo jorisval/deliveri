@@ -163,8 +163,105 @@ body {
             }
         }
     }
-
 }
+.services-section {
+    margin: 0 -0.5rem;
+    padding-top: ${theme.layout.spaceBetween60};
+    &__header {
+        text-align: center;
+        margin: auto;
+        width: 80%;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 40%;
+        }
+        h2 {
+            font-family: ${theme.typography.secondaryFontFamily};
+            font-size: 1.75rem;
+            line-height: 1.75rem;
+            color: ${theme.colors.titleH2};
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                margin-top: 1.25rem;
+                font-size: 2.5rem;
+            }
+        }
+        .separate-line {
+            width: 30px;
+            margin: auto;
+            border: 1px solid ${theme.colors.secondary};
+        }
+        p {
+            font-size: 1rem;
+            color: ${theme.colors.paragraph};
+            font-weight: 300;
+            line-height: 1.25rem;
+        }
+    }
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: ${theme.layout.spaceBetween60};
+        padding-bottom: ${theme.layout.spaceBetween60};
+        position: relative;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            margin-top: 1.25rem;
+            font-size: 2.5rem;
+            padding: 0 ${theme.layout.marginLeftRight};
+        }
+        .service {
+            min-width: 150px;
+            width: 30%;
+            box-sizing: border-box; 
+            padding: ${theme.layout.spaceBetween30};
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: ${theme.colors.white};
+            box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+            
+            z-index: 5;
+            img {
+                @media (max-width: ${theme.breakpoints.down.small}) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            h3 {
+                font-family: ${theme.typography.secondaryFontFamily};
+                font-size: 1.125rem;
+                font-weight: bold;
+                line-height: 1.25rem;
+                margin-top: 0.625rem;
+                margin-bottom: 0.625rem;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 1.25rem;
+                }   
+            }
+            p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                font-weight: 200;
+                margin-bottom: 1.25rem;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 1rem;
+                    line-height: 1.375rem;
+                } 
+            }
+        }
+        &__background {
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            height: 60%;
+            left: 0;
+            bottom: 0;
+            background-color: ${theme.colors.backgroundColor3};
+        }
+    }
+}
+
 .benefits-one, .benefits-three {
     margin: 0 ${theme.layout.marginLeftRight};
     margin-top: ${theme.layout.spaceBetween90};

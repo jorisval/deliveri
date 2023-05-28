@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { HeaderContext } from "../utils/context";
 import ThankYouPopup from "../pages/Thank-you-subscribe";
-//import BeneFirst from "../../assets/images/team-section-one-image.png";
+import Service1 from "../../assets/images/service-image-1.png";
+import Service2 from "../../assets/images/service-image-2.png";
+import Service3 from "../../assets/images/service-image-3.png";
 //import BeneSecond from "../../assets/images/team-section-two-image.png";
 //import BeneThird from "../../assets/images/team-section-three-image.png";
 //import CustomerImage1 from "../../assets/images/review-image-1.png";
@@ -16,6 +18,23 @@ import { Link } from "react-router-dom";
 function Home() {
     const [showThankYouPopup, setShowThankYouPopup] = useState(false);
     const { setActivePage } = useContext(HeaderContext);
+    const servicesData = [
+        {
+            title: "Find your delivery",
+            content: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla",
+            image: Service1,
+        },
+        {
+            title: "Order with click",
+            content: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla",
+            image: Service2,
+        },
+        {
+            title: "We are very fast",
+            content: "consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla",
+            image: Service3,
+        }
+    ]
     useEffect(() => {
         setActivePage('home');
     }, [setActivePage]);
@@ -39,7 +58,27 @@ function Home() {
                     </div>
                 </div>
                 <div className="hero__overlay"></div>
-            </div>{/*
+            </div>
+            <div className="services-section">
+                <div className="services-section__header">
+                    <h2>What Is Our Services</h2>
+                    <div className="separate-line"></div>
+                    <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue</p>
+                </div>
+                <div className="services">
+                    {servicesData.map((service, index) => {
+                        return(
+                            <div className="service" key={index}>
+                                <img src={service.image} alt="" />
+                                <h3>{service.title}</h3>
+                                <p>{service.content}</p>
+                            </div>
+                        )
+                    })}
+                    <div className="services__background"></div>
+                </div>
+            </div>
+            {/*
             <div className="steps-section">
                 <h2>Plan, Organize, and Execute Your Projects.</h2>
                 <div className="steps">
