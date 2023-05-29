@@ -246,7 +246,7 @@ body {
     }
 }
 
-.tracking-section {
+.tracking-section, .same-day-section {
     margin: 0 -0.5rem;
     padding: ${theme.layout.spaceBetween60} ${theme.layout.marginLeftRight};
     display: flex;

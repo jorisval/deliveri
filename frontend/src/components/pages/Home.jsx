@@ -5,6 +5,7 @@ import Service1 from "../../assets/images/service-image-1.png";
 import Service2 from "../../assets/images/service-image-2.png";
 import Service3 from "../../assets/images/service-image-3.png";
 import TrackingSectionImage from "../../assets/images/image-track.png";
+import SameDaySectionImage from "../../assets/images/what-section-image.png";
 import CallFast from "../../assets/images/call-fast.png";
 //import BeneSecond from "../../assets/images/team-section-two-image.png";
 //import BeneThird from "../../assets/images/team-section-three-image.png";
@@ -123,6 +124,17 @@ function Home() {
                     </div>
                 </div>
                 <div className="how-section__overlay"></div>
+            </div>
+            <div className="same-day-section">
+                <div className="tracking-section__image">
+                    <img src={SameDaySectionImage} alt="" />
+                </div>
+                <div className="same-day-section__text">
+                    <h2>So What Exactly Is Same-Day Delivery ?</h2>
+                    <div className="separate-line"></div>
+                    <p className="same-day">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue adipiscing elit duis tristique sollicitudin...</p>      
+                    <Link to="" className="cta-button">More Details</Link>
+                </div>
             </div>
             {/*
             <div className="steps-section">
