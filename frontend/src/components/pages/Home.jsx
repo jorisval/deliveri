@@ -5,6 +5,7 @@ import Service1 from "../../assets/images/service-image-1.png";
 import Service2 from "../../assets/images/service-image-2.png";
 import Service3 from "../../assets/images/service-image-3.png";
 import TrackingSectionImage from "../../assets/images/image-track.png";
+import CallFast from "../../assets/images/call-fast.png";
 //import BeneSecond from "../../assets/images/team-section-two-image.png";
 //import BeneThird from "../../assets/images/team-section-three-image.png";
 //import CustomerImage1 from "../../assets/images/review-image-1.png";
@@ -89,6 +90,39 @@ function Home() {
                     <p className="tracking">consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue adipiscing elit duis tristique sollicitudin...</p>      
                     <Link to="" className="cta-button">More Details</Link>
                 </div>
+            </div>
+            <div className="how-section">
+                <div className="call-fast">
+                    <img src={CallFast} alt="" />
+                    <p>We are working 24/7, you can call us any time  <span className="number">+33 7 80 70 82 87</span></p>
+                </div>
+                <div className="how-section__text">
+                    <h2>How it works ?</h2>
+                    <div className="how-it-works">
+                        <div className="how-it-works__first">
+                            <div><span className="bi">01</span></div>
+                            <div className="content">
+                                <h4>Register first</h4>
+                                <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue</p>
+                            </div>
+                        </div>
+                        <div className="how-it-works__second">
+                            <div><span className="bi">02</span></div>
+                            <div className="content">
+                                <h4>Creat an account</h4>
+                                <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue</p>
+                            </div>
+                        </div>
+                        <div className="how-it-works__third">
+                            <div><span className="bi">03</span></div>
+                            <div className="content">
+                                <h4>Make payment</h4>
+                                <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="how-section__overlay"></div>
             </div>
             {/*
             <div className="steps-section">

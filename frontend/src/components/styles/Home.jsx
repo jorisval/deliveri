@@ -1,6 +1,8 @@
 import styled, { keyframes } from 'styled-components';
 import theme from '../utils/Variables';
-import HeroBackground from '../../assets/images/deliveri-hero-image.png'
+import HeroBackground from '../../assets/images/deliveri-hero-image.png';
+import HowBackground from '../../assets/images/how-section-background-image-2.png';
+
 
 const fadeIn = keyframes`
   0% {
@@ -87,24 +89,6 @@ body {
         }   
 
     }
-    &__image {
-        z-index: 2;
-        margin: auto;
-        max-width: 90%;
-        padding-top: ${theme.layout.spaceBetween30};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            max-width: 60%;
-        }
-        @media (min-width: ${theme.breakpoints.up.large}) {
-            max-width: 50%;
-            padding-top: ${theme.layout.spaceBetween90};
-            margin: none;
-        }
-        img {
-            width: 100%;
-        }
-    }
-
 }
 .steps-section {
     width: 80%;
@@ -319,6 +303,124 @@ body {
             font-weight: 200;
             line-height: 1.25rem;
         }
+    }
+}
+
+.how-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    background: url(${HowBackground}) center bottom / cover;
+    background-color: ${theme.colors.backgroundColor1};
+    margin: 0 -0.5rem;
+    padding: 0 0 ${theme.layout.spaceBetween60} 0;
+    @media (min-width: ${theme.breakpoints.up.large}) {
+        padding: 0 0 ${theme.layout.spaceBetween90} 0;
+    }
+    .call-fast {
+        display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 4;
+            width: 80%;
+            margin: auto;
+            color: ${theme.colors.titleH2};
+            background-color: ${theme.colors.white};
+            padding: ${theme.layout.spaceBetween20};
+            margin-top: -${theme.layout.spaceBetween60};
+            margin-bottom: ${theme.layout.spaceBetween60};
+            img {
+                max-width: 30px;
+                max-height: 30px;
+                @media (min-width: ${theme.breakpoints.up.large}) {
+                    max-width: 60px;
+                    max-height: 60px;
+                }
+            }
+            p {
+                font-size: 0.875rem;
+                font-weight: 500;
+                margin: 0.5rem 0;
+                margin-left: 0.5rem;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 1rem;
+                }
+                span {
+                    color: ${theme.colors.secondary};
+                }
+            }
+    }
+    &__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(86,63,79,0.80);
+        @media (min-width: ${theme.breakpoints.up.large}) {
+            display:none;
+        }
+
+    }
+    &__text {
+        z-index: 2;
+        width: 80%;
+        margin: auto;
+        @media (min-width: ${theme.breakpoints.up.large}) {
+            margin: 0 0 0 ${theme.layout.marginLeftRight};
+            width: 40%;
+        }
+        h2 {
+            color: ${theme.colors.white};
+            font-familly: ${theme.typography.secondaryFontFamily};
+            font-size: 1.5rem;
+            line-height: 2rem;
+            margin-bottom: ${theme.layout.spaceBetween30};
+            @media (min-width: ${theme.breakpoints.up.large}) {
+                font-size: 2.375rem;
+                line-height: 3.2rem;
+                text-align: left;
+            }
+        }
+        .how-it-works {
+            display: flex;
+            flex-direction: column;
+            padding-left: 0;
+            margin-bottom: ${theme.layout.spaceBetween30};
+            &__first, &__second, &__third {
+                display: flex;
+                justify-content: space-between;
+                color: ${theme.colors.white};
+                line-height: 1.625rem;
+                font-weight: 200;
+                margin-bottom: 1rem;
+                .bi {
+                    font-size: 0.875rem;
+                    width: 30px;
+                    height: 30px;
+                    border: 1px solid ${theme.colors.secondary};
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .content {
+                    margin-left: 0.5rem;
+                }
+                p {
+                    margin-top: 0;
+                }
+                h4 {
+                    font-weight: 400;
+                    margin-top: 0;
+                    margin-bottom: 0.25rem;
+                }
+            }
+        }   
+
     }
 }
 
