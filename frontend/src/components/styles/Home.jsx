@@ -423,6 +423,105 @@ body {
 
     }
 }
+.payments-section {
+    margin: 0 -0.5rem;
+    padding-top: ${theme.layout.spaceBetween60};
+    &__header {
+        text-align: center;
+        margin: auto;
+        width: 80%;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 40%;
+        }
+        h2 {
+            font-family: ${theme.typography.secondaryFontFamily};
+            font-size: 1.75rem;
+            line-height: 1.75rem;
+            color: ${theme.colors.titleH2};
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                margin-top: 1.25rem;
+                font-size: 2.5rem;
+            }
+        }
+        .separate-line {
+            width: 30px;
+            margin: auto;
+            border: 1px solid ${theme.colors.secondary};
+        }
+        p {
+            font-size: 1rem;
+            color: ${theme.colors.paragraph};
+            font-weight: 300;
+            line-height: 1.25rem;
+        }
+    }
+    .payments {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-top: ${theme.layout.spaceBetween60};
+        padding-bottom: ${theme.layout.spaceBetween60};
+        position: relative;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            margin-top: 1.25rem;
+            font-size: 2.5rem;
+            padding: 0 ${theme.layout.marginLeftRight};
+        }
+        .payment {
+            min-width: 150px;
+            width: 30%;
+            box-sizing: border-box; 
+            padding: ${theme.layout.spaceBetween30};
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+            background-color: ${theme.colors.white};
+            box-shadow: 4px 4px 4px rgba(0,0,0,0.1);
+            z-index: 5;
+            h3 {
+                font-family: ${theme.typography.secondaryFontFamily};
+                font-size: 1.125rem;
+                font-weight: bold;
+                line-height: 1.25rem;
+                margin-top: 0.625rem;
+                margin-bottom: 0.625rem;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 1.25rem;
+                }   
+            }
+            .price {
+                font-size: 1.5rem;
+                color: ${theme.colors.button};
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 2rem;
+                }
+            }
+            p {
+                font-size: 0.875rem;
+                line-height: 1.25rem;
+                font-weight: 200;
+                margin-top: 0.625rem;
+                margin-bottom: 0.625rem;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    font-size: 1rem;
+                    line-height: 1.375rem;
+                } 
+            }
+        }
+        &__background {
+            position: absolute;
+            z-index: 4;
+            width: 100%;
+            height: 60%;
+            left: 0;
+            bottom: 0;
+            background-color: ${theme.colors.backgroundColor1};
+        }
+    }
+}
+
 
 .benefits-one, .benefits-three {
     margin: 0 ${theme.layout.marginLeftRight};

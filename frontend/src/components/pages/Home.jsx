@@ -136,6 +136,61 @@ function Home() {
                     <Link to="" className="cta-button">More Details</Link>
                 </div>
             </div>
+            <div className="payments-section">
+                <div className="payments-section__header">
+                    <h2>Choose your payment zone</h2>
+                    <div className="separate-line"></div>
+                    <p>consectetur adipiscing elit duis tristique sollicitudin nibh sit amet commodo nulla facilisi nullam vehiculacongue</p>
+                </div>
+                <div className="payments">
+                    <div className="payment">
+                        <h3>Downtown Area</h3>
+                        <div className="price">
+                            <span>$</span>
+                            <span>38/</span>
+                            <span>mo</span>
+                        </div>
+                        <div className="content">
+                            <p>consectetur</p>
+                            <p>cosollicitudin nibh sit</p>
+                            <p>sectetur adipiscing</p>
+                            <p>amet commodo nulla</p>
+                        </div>
+                        <Link to="" className="cta-button">Select</Link>
+                    </div>
+                    <div className="payment">
+                        <h3>Near Suburbia</h3>
+                        <div className="price">
+                            <span>$</span>
+                            <span>48/</span>
+                            <span>mo</span>
+                        </div>
+                        <div className="content">
+                            <p>consectetur</p>
+                            <p>cosollicitudin nibh sit</p>
+                            <p>sectetur adipiscing</p>
+                            <p>amet commodo nulla</p>
+                        </div>
+                        <Link to="" className="cta-button">Select</Link>
+                    </div>
+                    <div className="payment">
+                        <h3>Far Suburbia</h3>
+                        <div className="price">
+                            <span>$</span>
+                            <span>58/</span>
+                            <span>mo</span>
+                        </div>
+                        <div className="content">
+                            <p>consectetur</p>
+                            <p>cosollicitudin nibh sit</p>
+                            <p>sectetur adipiscing</p>
+                            <p>amet commodo nulla</p>
+                        </div>
+                        <Link to="" className="cta-button">Select</Link>
+                    </div>
+                    <div className="payments__background"></div>
+                </div>
+            </div>
             {/*
             <div className="steps-section">
                 <h2>Plan, Organize, and Execute Your Projects.</h2>
