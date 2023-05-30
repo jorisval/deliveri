@@ -11,6 +11,14 @@ import CustomerImage1 from "../../assets/images/review-image-1.png";
 import CustomerImage2 from "../../assets/images/review-image-2.png";
 import CustomerImage3 from "../../assets/images/review-image-3.png";
 import CustomerImage4 from "../../assets/images/review-image-4.png";
+import PartnerImage1 from "../../assets/images/Partner-1.png";
+import PartnerImage2 from "../../assets/images/Partner-2.png";
+import PartnerImage3 from "../../assets/images/Partner-3.png";
+import PartnerImage4 from "../../assets/images/Partner-4.png";
+import PartnerImage5 from "../../assets/images/Partner-5.png";
+import PartnerImage6 from "../../assets/images/Partner-6.png";
+import PartnerImage7 from "../../assets/images/Partner-7.png";
+import PartnerImage8 from "../../assets/images/Partner-8.png";
 import { HomeContainer } from "../styles/Home";
 import { Link } from "react-router-dom";
 
@@ -257,102 +265,17 @@ function Home() {
                     ))}
                 </div>
             </div>
-            {/*
-            <div className="steps-section">
-                <h2>Plan, Organize, and Execute Your Projects.</h2>
-                <div className="steps">
-                    <div className="step">
-                        <div className="order">1</div>
-                        <p>Brainstorm in Mind Maps</p>
-                    </div>
-                    <div className="step">
-                        <div className="order">2</div>
-                        <p>Manage in Project Boards</p>
-                    </div>
-                    <div className="step">
-                        <div className="order">3</div>
-                        <p>Organize in To-Do Lists</p>
-                    </div>
-                </div>
+            <div className="partners-section">
+                <div className="partners-section__image"><img src={PartnerImage1} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage2} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage3} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage4} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage5} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage6} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage7} alt="" /></div>
+                <div className="partners-section__image"><img src={PartnerImage8} alt="" /></div>
             </div>
-            <div className="benefits-one">
-                <div className="benefits-one__image">
-                    <img src={BeneFirst} alt=""/>
-                </div>
-                <div className="benefits-one__text">
-                    <h2>Organize & Manage Tasks & To-Do Lists</h2>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p>Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
-                    <Link to="/blog">Learn more <span className="bi bi-arrow-right"></span></Link>
-                </div>
-            </div>
-            <div className="benefits-two">
-                <div className="benefits-two__image">
-                    <img src={BeneSecond} alt=""/>
-                </div>
-                <div className="benefits-two__text">
-                    <h2>Share Tasks Online</h2>
-                    <p>Share your to-do lists, mind maps, and projects online for free with your teammates, and collaborate together in real-time, across any device. Communicate with your team via built-in free and unlimited chat and video conferencing on every single project.</p>
-                    <Link to="/blog">Learn more <span className="bi bi-arrow-right"></span></Link>
-                </div>
-            </div>
-            <div className="benefits-three">
-                <div className="benefits-three__image">
-                    <img src={BeneThird} alt=""/>
-                </div>
-                <div className="benefits-three__text">
-                    <h2>Manage Team Tasks</h2>
-                    <p>Plan, organize, and prioritize upcoming tasks in the team roadmap. Taskade lets you automate your workflows and get work done.</p>
-                    <Link to="/blog">Learn more <span className="bi bi-arrow-right"></span></Link>
-                </div>
-            </div>
-            <div className="cta-section" id="cta-section">
-                <h2>Get Work Done. Faster + Smarter.</h2>
-                <div className="cta-row">
-                    <form onSubmit={handleSubmit}>
-                        <input type="email" id="email" name="email" placeholder="Email"/>
-                        <input type="submit" value="Sign up"/>
-                    </form>
-                </div>
-            </div>
-            <div className="testimonials-section">
-                <h2>What the people say about us</h2>
-                <div className="testimonials" ref={testimonialRef}>
-                    {testimonialsData.map((testimonial, index) => {
-                        return(
-                            <div className={`testimonial ${index === activeTestimonial ? 'active' : ''}`} key={index} ref={testimonialsRefs[index]}>
-                                <div className="testimonial__header">
-                                    <div className="customer-info">
-                                        <img src={testimonial.image} alt="" />
-                                        <div>
-                                            <p className="customer-name">{testimonial.name}</p>
-                                            <p className="customer-company">{testimonial.company}</p>
-                                        </div>
-                                    </div>
-                                    <div className="coma">
-                                        <img src={Comas} alt="" />
-                                    </div>
-                                </div>
-                                <div className="testimonial__body">{testimonial.comment}</div>
-                            </div>
-                        )
-                    })}
-                </div>
-                <div className="testimonial-directions">
-                    <span className="bi bi-chevron-left" onClick={() => handleTestimonialScroll('left')}></span>
-                    <div className="testimonial-circles">
-                        {testimonialsData.map((_, index) => (
-                            <div
-                                className={`bi ${index === activeTestimonial ? 'bi-record-circle' : 'bi-circle'}`}
-                                onClick={() => handleTestimonialCircleClick(index)}
-                                key={index}
-                            />
-                        ))}
-                    </div>
-                    <span className="bi bi-chevron-right" onClick={() => handleTestimonialScroll('right')}></span>
-                </div>
-            </div>*/}
-                        {showThankYouPopup && (<ThankYouPopup onClose={handleCloseThankYouPopup} />)}
+            {showThankYouPopup && (<ThankYouPopup onClose={handleCloseThankYouPopup} />)}
         </HomeContainer>
     )
 }

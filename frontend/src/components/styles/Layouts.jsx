@@ -14,7 +14,7 @@ const fadeIn = keyframes`
 const LayoutsStyle = createGlobalStyle`
     body {
         font-familly: ${theme.typography.primaryFontFamily};
-        background-color: ${theme.colors.white};
+        background-color: ${theme.colors.backgroundColor3};
     }
     p {
         font-size: 1rem;
@@ -220,7 +220,7 @@ const LayoutsStyle = createGlobalStyle`
             color: ${theme.colors.white};
             background-color: ${theme.colors.secondary};
             padding: ${theme.layout.spaceBetween20};
-            margin-top: ${theme.layout.spaceBetween90};
+            margin-top: 0;
             margin-bottom: -${theme.layout.spaceBetween90};
             h3 {
                 color: ${theme.colors.white};
@@ -316,7 +316,7 @@ const LayoutsStyle = createGlobalStyle`
             background: url(${FooterBackground}) center bottom / cover;
             margin-bottom: 0.5rem;
             padding: ${theme.layout.spaceBetween90} 0;
-
+            padding-top: ${theme.layout.spaceBetween60};
             div {
                 padding: 1rem;
                 text-align: center;

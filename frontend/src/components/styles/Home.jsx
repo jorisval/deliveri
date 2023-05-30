@@ -616,6 +616,31 @@ body {
         }
     }
 }
-
+.partners-section {
+    margin: 0 -0.5rem;
+    padding: ${theme.layout.spaceBetween60} ${theme.layout.marginLeftRight};
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: ${theme.colors.backgroundColor3};
+    &__image {
+        margin-bottom: ${theme.layout.spaceBetween20};
+        margin-right: 0.5rem;
+        display: flex;
+        justify-content: center;
+        @media (min-width: ${theme.breakpoints.up.medium}) {
+            width: 22%;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            @media (min-width: ${theme.breakpoints.up.medium}) {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}
 
 `;
