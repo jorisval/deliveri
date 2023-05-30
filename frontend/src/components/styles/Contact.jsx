@@ -12,31 +12,9 @@ const fadeIn = keyframes`
 
 export const ContactContainer = styled.div`
     animation: ${fadeIn} 1s ease-in;
-    .pages-title {
-        padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
-        padding-bottom: ${theme.layout.spaceBetween10};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            padding: ${theme.layout.spaceBetween60} ${theme.layout.marginLeftRight};
-            padding-bottom: ${theme.layout.spaceBetween10};
-        }
-        h1 {
-            color: ${theme.colors.primary};
-            font-size: 1.25rem;
-            font-weight: 800;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.75rem;
-            }
-            .bi-chevron-double-right {
-                font-size: 1rem;
-                @media (min-width: ${theme.breakpoints.up.medium}) {
-                    font-size: 1.375rem;
-                }
-            }
-        }
-    }
     .contact-form {
         margin: auto;
-        margin-top: ${theme.layout.spaceBetween30};
+        margin-top: ${theme.layout.spaceBetween60};
         margin-bottom: ${theme.layout.spaceBetween30};
         width: 80%;
         @media (min-width: ${theme.breakpoints.up.medium}) {
@@ -90,7 +68,6 @@ export const ContactContainer = styled.div`
                 padding: 0.375rem 1.625rem;
                 background-color: ${theme.colors.button};
                 width: unset;
-                border-radius: 5px;
                 border-style: none;
                 display: inline-block;
                 cursor: pointer;

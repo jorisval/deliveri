@@ -124,7 +124,6 @@ export const PostContainer = styled.div`
             color: ${theme.colors.white};
             padding: 0.375rem 1.625rem;
             background-color: ${theme.colors.button};
-            border-radius: 5px;
             border-style: none;
             display: inline-block;
             margin: ${theme.layout.spaceBetween10} 0;

@@ -245,6 +245,7 @@ const LayoutsStyle = createGlobalStyle`
                 color: ${theme.colors.backgroundColor2};
                 padding: 0.25rem 0.5rem;
                 border: 2px ${theme.colors.button} solid;
+                min-width: 90px;
                 width: 65%;
 
                 @media (min-width: ${theme.breakpoints.up.medium}) {
@@ -254,7 +255,7 @@ const LayoutsStyle = createGlobalStyle`
             }
 
             input[type="submit"] {
-                font-size: 0.875rem;
+                font-size: 0.625rem;
                 color: ${theme.colors.white};
                 background-color: ${theme.colors.backgroundColor2};
                 padding: 0.25rem 0.5rem;
