@@ -2,6 +2,7 @@ import styled, { keyframes } from 'styled-components';
 import theme from '../utils/Variables';
 import HeroBackground from '../../assets/images/deliveri-hero-image.png';
 import HowBackground from '../../assets/images/how-section-background-image-2.png';
+import ReviewsBackground from '../../assets/images/reviews-section-background-image.png';
 
 
 const fadeIn = keyframes`
@@ -521,275 +522,100 @@ body {
         }
     }
 }
-
-
-.benefits-one, .benefits-three {
-    margin: 0 ${theme.layout.marginLeftRight};
-    margin-top: ${theme.layout.spaceBetween90};
+.reviews-section {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    @media (min-width: ${theme.breakpoints.up.medium}) {
-        flex-direction: row;
-        align-items: center;
+    position: relative;
+    z-index: 1;
+    background: url(${ReviewsBackground}) center bottom / cover;
+    background-color: ${theme.colors.backgroundColor1};
+    margin: 0 -0.5rem;
+    padding: ${theme.layout.spaceBetween60} 0;
+    @media (min-width: ${theme.breakpoints.up.large}) {
+        padding: ${theme.layout.spaceBetween90} 0;
     }
-    &__image {
-        width: 100%;
-        margin-bottom: ${theme.layout.spaceBetween20};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 60%;
-            max-width: 43.75rem;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    &__text {
-        text-align: left;
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 40%;
-            max-width: 41.25rem;
-        } 
-        h2 {
-            color: ${theme.colors.titleH2};
-        }
-        p {
-            color: ${theme.colors.paragraph};
-            font-size: 1rem;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-        }
-        a {
-            color: ${theme.colors.link};
-            font-size: 1rem;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            text-decoration: none;
-        }
-    }
-}
-.benefits-two {
-    margin: 0 ${theme.layout.marginLeftRight};
-    margin-top: ${theme.layout.spaceBetween90};
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    @media (min-width: ${theme.breakpoints.up.medium}) {
-        flex-direction: row-reverse;
-        align-items: center;
-    }
-    &__image {
-        width: 100%;
-        margin-bottom: ${theme.layout.spaceBetween20};
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 60%;
-            max-width: 43.75rem;
-        }
-        img {
-            width: 100%;
-        }
-    }
-    &__text {
-        text-align: left;
-        @media (min-width: ${theme.breakpoints.up.medium}) {
-            width: 40%;
-            max-width: 41.25rem;
-        } 
-        h2 {
-            color: ${theme.colors.titleH2};
-        }
-        p {
-            color: ${theme.colors.paragraph};
-            font-size: 1rem;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-        }
-        a {
-            color: ${theme.colors.link};
-            font-size: 1rem;
-            line-height: 1.625rem;
-            margin-bottom: ${theme.layout.spaceBetween20};
-            text-decoration: none;
-        }
-    }
-}
-.cta-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
-    margin: -0.5rem;
-    margin-top: ${theme.layout.spaceBetween60};
-    background-color: ${theme.colors.primary};
-    h2 {
-        text-align: center;
-        color: ${theme.colors.white};
-        margin-bottom: ${theme.layout.spaceBetween30};
-    }
-    .cta-row {
-        display: flex;
-        justify-content: center;
-        margin-bottom: ${theme.layout.spaceBetween30};
-        form {
-            display: flex;
-            justify-content: center;
-            width: 80%;
+    .Customer {
+        &-reviews {
+            width: 90%;
+            margin: auto;
+            position: relative;
+            box-sizing: border-box;
             @media (min-width: ${theme.breakpoints.up.medium}) {
-                width: 40%;
+                width: 50%;
+            }
+            .bi-chevron-left {
+                position: absolute;
+                left: 0;
+                top: 45%;
+                color: ${theme.colors.white};
+                font-size: 2rem;
+                cursor: pointer;
+                z-index: 5;
+            }
+            .bi-chevron-right {
+                position: absolute;
+                right: 0;
+                top: 45%;
+                color: ${theme.colors.white};
+                font-size: 2rem;
+                cursor: pointer;
+                z-index: 5;
             }
         }
-
-        input[type="email"] {
-            font-size: 0.875rem;
-            color: ${theme.colors.paragraph};
-            padding: 0.5rem 0.75rem;
-            border: 2px ${theme.colors.button} solid;
-            border-radius: 4px 0 0 4px;
-            width: 65%;
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                padding: 0.75rem 1rem;
-                font-size: 1rem;
-            }
-        }
-
-        input[type="submit"] {
-            font-size: 0.875rem;
-            color: ${theme.colors.white};
-            background-color: ${theme.colors.button};
-            padding: 0.5rem 0.75rem;
-            border: 2px ${theme.colors.button} solid;
-            border-radius: 0 4px 4px 0;
-            margin-left: -5px;
-
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                padding: 0.75rem 1rem;
-                font-size: 1rem;
-            }
-        }
-    }
-}
-.testimonials-section {
-    display: flex;
-    flex-direction: column;
-    padding: ${theme.layout.spaceBetween30} ${theme.layout.marginLeftRight};
-    margin: -0.5rem;
-    background-color: ${theme.colors.primary};
-    h2 {
-        text-align: center;
-        color: ${theme.colors.white};
-        margin-bottom: ${theme.layout.spaceBetween30};
-    }
-    .testimonials {
-        display: flex;
-        padding: ${theme.layout.spaceBetween20};
-        overflow-x: auto;
-        -ms-overflow-style: none; /* Internet Explorer 10+ */
-        scrollbar-width: none; /* Firefox */
-        
-        &::-webkit-scrollbar { /* Chrome, Safari, Edge */
+        &-review {
             display: none;
-        }
-        .testimonial {
-            display: flex;
-            flex-direction: column;
-            flex-shrink: 0;
-            flex-grow: 0;
-            margin-left: ${theme.layout.spaceBetween20};
-            padding: ${theme.layout.spaceBetween30};
-            width: 200px;
-            background-color: ${theme.colors.white};
-            border-radius: 10px;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                width: 300px;
+            z-index: 4;
+            animation: ${fadeIn} 0.5s ease-in;
+            margin-bottom: ${theme.layout.spaceBetween30};
+            text-align: center;
+            &__image {
+                width: 40px;
+                height: 40px;
+                margin-bottom: ${theme.layout.spaceBetween10};
+                border-radius: 5px;
+                @media (min-width: ${theme.breakpoints.up.medium}) {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
+            p {
+                width: 70%;
+                color: ${theme.colors.white};
+                font-size: 1rem;
+                font-weight: 200;
+                line-height: 1.625rem;
+                margin: auto;
+                margin-bottom: ${theme.layout.spaceBetween20};
+            }
+            &__name {
+                color: ${theme.colors.white};
+                font-size: 1rem;
+                font-weight: 400;
+                margin-bottom: ${theme.layout.spaceBetween10};
             }
             &.active {
-                box-shadow: 0 0 20px ${theme.colors.white};
-            }
-            &__header {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                margin-bottom: ${theme.layout.spaceBetween20};
-                .customer {
-                    &-info {
-                        display: flex;
-                        align-items: center;
-                        img {
-                            width: 50px;
-                            height: 50px;
-                            border-radius: 50%;
-                            margin-right: 5px;
-                        }
-                    }
-                    &-name {
-                        font-size: 0.875rem;
-                        font-weight: bold;
-                        color: ${theme.colors.paragraph};
-                        margin: 0;
-                        margin-bottom: 4px;
-                    }
-                    &-company {
-                        font-size: 0.875rem;
-                        color: ${theme.colors.paragraph};
-                        margin: 0;
-                    }
-                }
-                .coma {
-                    img {
-                        width: 20px;
-                    }
-                }
-            }
-            &__body{
-                font-size: 0.875rem;
-                color: ${theme.colors.paragraph};
-                margin: 0;
-                @media (min-width: ${theme.breakpoints.up.medium}) {
-                    font-size: 1rem;
-                }
+                display: block;
             }
         }
     }
-    .testimonial-directions {
-        margin-top: ${theme.layout.spaceBetween20};
-        margin-bottom: ${theme.layout.spaceBetween30};
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .bi-chevron-left {
-            color: ${theme.colors.white};
-            font-size: 1rem;
-            cursor: pointer;
-            margin-right: 1rem;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.25rem;
-            }
+    .review {
+        &-circles {
+            display: flex;
+            justify-content: center;
         }
-        .bi-chevron-right {
-            color: ${theme.colors.white};
-            font-size: 1rem;
+        &-circle {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: ${theme.colors.white};
+            margin-right: 4px;
             cursor: pointer;
-            margin-left: 1rem;
-            @media (min-width: ${theme.breakpoints.up.medium}) {
-                font-size: 1.25rem;
-            }
-        }
-        .testimonial {
-            &-circles {
-                display: flex;
-                justify-content: center;
-                .bi {
-                    font-size: 0.875rem;
-                    color: ${theme.colors.white};
-                    margin-right: 4px;
-                    cursor: pointer;
-                    @media (min-width: ${theme.breakpoints.up.medium}) {
-                        font-size: 1.125rem;
-                    }
-                }
+            &.active {
+                background-color: ${theme.colors.secondary};
             }
         }
     }
 }
+
+
 `;

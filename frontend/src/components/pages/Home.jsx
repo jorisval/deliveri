@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState, useRef } from "react";
 import { HeaderContext } from "../utils/context";
 import ThankYouPopup from "../pages/Thank-you-subscribe";
 import Service1 from "../../assets/images/service-image-1.png";
@@ -7,13 +7,10 @@ import Service3 from "../../assets/images/service-image-3.png";
 import TrackingSectionImage from "../../assets/images/image-track.png";
 import SameDaySectionImage from "../../assets/images/what-section-image.png";
 import CallFast from "../../assets/images/call-fast.png";
-//import BeneSecond from "../../assets/images/team-section-two-image.png";
-//import BeneThird from "../../assets/images/team-section-three-image.png";
-//import CustomerImage1 from "../../assets/images/review-image-1.png";
-//import CustomerImage2 from "../../assets/images/review-image-2.png";
-//import CustomerImage3 from "../../assets/images/review-image-3.png";
-//import CustomerImage4 from "../../assets/images/review-image-1.png";
-//import Comas from "../../assets/images/review-comas.png";
+import CustomerImage1 from "../../assets/images/review-image-1.png";
+import CustomerImage2 from "../../assets/images/review-image-2.png";
+import CustomerImage3 from "../../assets/images/review-image-3.png";
+import CustomerImage4 from "../../assets/images/review-image-4.png";
 import { HomeContainer } from "../styles/Home";
 import { Link } from "react-router-dom";
 
@@ -38,6 +35,53 @@ function Home() {
             image: Service3,
         }
     ]
+
+    const [activeReview, setActiveReview] = useState(0);
+    const reviewRef = useRef();
+    const reviewsData = [
+        {
+            name: "RONALD D. MORGAN",
+            image: CustomerImage1,
+            comment: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi."
+        },
+        {
+            name: "JEAN D. CLAUDE",
+            image: CustomerImage2,
+            comment: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi."
+        },
+        {
+            name: "ALEX TARGARIAN",
+            image: CustomerImage3,
+            comment: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi."
+        },
+        {
+            name: "SAHAD DANARIAS",
+            image: CustomerImage4,
+            comment: "Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi."
+        }
+    ]
+    
+    const handleReviewScroll = (direction) => {
+        if (direction === 'left') {
+            reviewRef.current.scrollLeft -= reviewRef.current.offsetWidth;
+            if (activeReview > 0) {
+                setActiveReview(activeReview - 1);
+            }
+        } else {
+            reviewRef.current.scrollLeft += reviewRef.current.offsetWidth;
+            if   (activeReview < reviewsData.length - 1) {
+                setActiveReview(activeReview + 1);
+            }
+        }
+    };
+
+    const handleReviewCircleClick = (index) => {
+        setActiveReview(index);
+        reviewRef.current.scrollLeft = index * reviewRef.current.offsetWidth;
+    };
+
+
+
     useEffect(() => {
         setActivePage('home');
     }, [setActivePage]);
@@ -189,6 +233,28 @@ function Home() {
                         <Link to="" className="cta-button">Select</Link>
                     </div>
                     <div className="payments__background"></div>
+                </div>
+            </div>
+            <div className="reviews-section">
+                <div className="Customer-reviews" ref={reviewRef}>
+                    <span className="bi bi-chevron-left" onClick={() => handleReviewScroll('left')}></span>
+                    {reviewsData.map((review, index) => (
+                        <div className={`Customer-review ${index === activeReview ? 'active' : ''}`} key={index}>
+                            <img src={review.image} alt="" className="Customer-review__image"/>
+                            <p>{review.comment}</p>
+                            <div className="Customer-review__name">{review.name}</div>
+                        </div>
+                    ))}
+                    <span className="bi bi-chevron-right" onClick={() => handleReviewScroll('right')}></span>
+                </div>
+                <div className="review-circles">
+                    {reviewsData.map((_, index) => (
+                        <div
+                            className={`review-circle ${index === activeReview ? 'active' : ''}`}
+                            onClick={() => handleReviewCircleClick(index)}
+                            key={index}
+                        />
+                    ))}
                 </div>
             </div>
             {/*
