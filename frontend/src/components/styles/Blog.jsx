@@ -68,7 +68,7 @@ export const BlogContainer = styled.div`
                 padding-bottom: 1.875rem;
             }
             &:hover {
-                border-bottom: 3px solid ${theme.colors.secondary};
+                box-shadow: inset 0 -5px 0 0 ${theme.colors.secondary};
             }
             .image {
                 height: 200px;
@@ -91,7 +91,7 @@ export const BlogContainer = styled.div`
             h3 {
                 margin: 0;
                 margin-bottom: 0.9375rem;
-                color: ${theme.colors.titleH2};
+                color: ${theme.colors.white};
                 background-color: ${theme.colors.backgroundColor2};
                 font-familly: ${theme.typography.secondaryFontFamily};
                 font-size: 1.25rem;
