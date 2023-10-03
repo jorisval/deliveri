@@ -4,6 +4,7 @@ import PlayStore from "../../assets/images/google-play.png";
 import GoogleMap from "../../assets/images/google-map.png";
 import ThankYouPopup from "../pages/Thank-you-newsletter";
 import { Link } from "react-router-dom";
+import { BASE_URL } from '../../config';
 
 function Footer() {
     const [showThankYouPopup, setShowThankYouPopup] = useState(false);
@@ -18,7 +19,7 @@ function Footer() {
         }
     
         try {
-            const response = await fetch("http://localhost:3000/api/newsletter", {
+            const response = await fetch(`${BASE_URL}/api/newsletter`, {
                 method: "POST",
                 body: searchParams,
                 headers: {
