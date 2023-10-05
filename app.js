@@ -14,7 +14,11 @@ const allowedDomains = [
     'http://localhost:3001',
     'http://localhost:3001/',
     'https://deliveri.vercel.app/',
-    'https://deliveri.vercel.app'
+    'https://deliveri.vercel.app',
+    'https://deliveri-53e767d5113f.herokuapp.com/',
+    'https://deliveri-53e767d5113f.herokuapp.com',
+    'http://deliveri-53e767d5113f.herokuapp.com/',
+    'http://deliveri-53e767d5113f.herokuapp.com'
 ];
   
 

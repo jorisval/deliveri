@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/static/js/main.66c4e46f.js",
+    "main.js": "/static/js/main.24e30bf5.js",
     "static/media/what-section-image.png": "/static/media/what-section-image.6004110812fd14290007.png",
     "static/media/image-track.png": "/static/media/image-track.f45f5801e7a212d33129.png",
     "static/media/deliveri-hero-image.png": "/static/media/deliveri-hero-image.ca4a56d373b119f1db4c.png",
@@ -12,9 +12,9 @@
     "static/media/Partner-2.png": "/static/media/Partner-2.c339ae1469eaf4b1107f.png",
     "static/media/Partner-7.png": "/static/media/Partner-7.c339ae1469eaf4b1107f.png",
     "index.html": "/index.html",
-    "main.66c4e46f.js.map": "/static/js/main.66c4e46f.js.map"
+    "main.24e30bf5.js.map": "/static/js/main.24e30bf5.js.map"
   },
   "entrypoints": [
-    "static/js/main.66c4e46f.js"
+    "static/js/main.24e30bf5.js"
   ]
 }
